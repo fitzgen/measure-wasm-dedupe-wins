@@ -6,9 +6,15 @@ given corpus of Wasm binaries.
 
 ## Usage
 
+Give the tool a directory tree and it will walk it to find all the Wasm binaries inside:
+
 ```
-$ cargo build --release
 $ cargo run --release -- path/to/corpus/of/Wasm/binaries
+```
+
+And then it will output information about how much duplication exists between those Wasm binaries:
+
+```
 Total size:                   9706508 bytes
 --------------------------------------------------------------------------------
 Duplicated data segments:       79230 bytes (0.82%)
